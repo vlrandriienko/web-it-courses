@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Enrollment | Codeva</title>
+  <meta name="description" content="Complete the form below to start your learning journey with Codeva.">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Header Section -->
+  <header class="header">
+    <a class="header__logo" href="index.html" aria-label="Codeva Home Page">
+      <span class="header__logo-text">Codeva</span>
+    </a>
+
+    <nav class="nav" aria-label="Main Navigation">
+      <ul class="nav__list">
+        <li class="nav__item">
+          <a class="nav__link" href="index.html">Home</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="list.html">Courses</a>
+        </li>
+      </ul>
+    </nav>
+
+    <a class="button button--primary header__action" href="form.html" aria-current="page">Enroll now</a>
+  </header>
+
+  <!-- Main Enrollment Content -->
+  <main id="main">
+    <section class="enrollment-section" aria-labelledby="page-title">
+      <header class="enrollment-section__header">
+        <h1 class="enrollment-section__title" id="page-title">Enroll in a course</h1>
+        <p class="enrollment-section__description">
+          Complete the form below to start your learning journey.
+        </p>
+      </header>
+
+      <div class="enrollment-section__layout">
+        <!-- Form Container -->
+        <section class="form-container" aria-labelledby="form-title">
+          <h2 class="form-container__title" id="form-title">Enrollment form</h2>
+
+          <form class="enrollment-form" action="/enroll" method="post" novalidate>
+            <fieldset class="enrollment-form__fieldset">
+              <legend class="visually-hidden">Student Personal Details</legend>
+
+              <div class="form-group">
+                <label class="form-group__label" for="full-name">Full name</label>
+                <input class="form-group__input" id="full-name" name="fullName" type="text" required minlength="2" maxlength="60" autocomplete="name" placeholder="Enter your full name">
+              </div>
+
+              <div class="form-group">
+                <label class="form-group__label" for="email">Email address</label>
+                <input class="form-group__input" id="email" name="email" type="email" required autocomplete="email" placeholder="Enter your email">
+              </div>
+
+              <div class="form-group">
+                <label class="form-group__label" for="selected-course">Selected course</label>
+                <select class="form-group__select" id="selected-course" name="course" required>
+                  <option value="frontend-dev" selected>Frontend Development</option>
+                  <option value="uiux-design">UI/UX Design Fundamentals</option>
+                  <option value="python-data">Python for Data Science</option>
+                  <option value="backend-dev">Backend Development</option>
+                </select>
+              </div>
+            </fieldset>
+
+            <button class="button button--primary enrollment-form__submit" type="submit">
+              Complete enrollment
+            </button>
+          </form>
+        </section>
+
+        <!-- Selected Course Summary Card -->
+        <aside class="selected-course-card" aria-label="Selected course summary">
+          <span class="selected-course-card__badge">Selected course</span>
+          <h2 class="selected-course-card__title">Frontend Development</h2>
+          <p class="selected-course-card__author">by Emma Wilson</p>
+
+          <dl class="course-meta">
+            <dt class="visually-hidden">Rating</dt>
+            <dd class="course-meta__item">&#9733; 4.8</dd>
+            <dt class="visually-hidden">Duration</dt>
+            <dd class="course-meta__item">12 weeks</dd>
+            <dt class="visually-hidden">Skill Level</dt>
+            <dd class="course-meta__item">Beginner</dd>
+          </dl>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="footer__main">
+      <div class="footer__brand">
+        <a class="footer__logo" href="index.html">Codeva</a>
+        <p class="footer__tagline">Learn today. Build tomorrow.</p>
+      </div>
+
+      <nav class="footer__nav" aria-label="Footer Navigation">
+        <ul class="footer__list">
+          <li><a class="footer__link" href="index.html">Home</a></li>
+          <li><a class="footer__link" href="list.html">Courses</a></li>
+          <li><a class="footer__link" href="form.html" aria-current="page">Enrollment</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="footer__bottom">
+      <p class="footer__copyright">&copy; 2026 Codeva. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Courses Catalog | Codeva</title>
+  <meta name="description" content="Explore our IT courses and build practical skills designed for every stage of your learning journey.">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Header Section -->
+  <header class="header">
+    <a class="header__logo" href="index.html" aria-label="Codeva Home Page">
+      <span class="header__logo-text">Codeva</span>
+    </a>
+
+    <nav class="nav" aria-label="Main Navigation">
+      <ul class="nav__list">
+        <li class="nav__item">
+          <a class="nav__link" href="index.html">Home</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link nav__link--active" href="list.html" aria-current="page">Courses</a>
+        </li>
+      </ul>
+    </nav>
+
+    <a class="button button--primary header__action" href="form.html">Enroll now</a>
+  </header>
+
+  <!-- Main Catalog Content -->
+  <main id="main">
+    <!-- Page Intro Header -->
+    <section class="courses-intro" aria-labelledby="courses-title">
+      <h1 class="courses-intro__title" id="courses-title">Explore our courses</h1>
+      <p class="courses-intro__description">
+        Build practical skills with courses designed for every stage of your learning journey.
+      </p>
+
+      <!-- Category Filter Navigation -->
+      <aside class="filters" aria-label="Course Categories Filter">
+        <ul class="filters__list">
+          <li><button class="filters__btn filters__btn--active" type="button">All courses</button></li>
+          <li><button class="filters__btn" type="button">Frontend</button></li>
+          <li><button class="filters__btn" type="button">Backend</button></li>
+          <li><button class="filters__btn" type="button">UI/UX Design</button></li>
+          <li><button class="filters__btn" type="button">Data Science</button></li>
+        </ul>
+      </aside>
+    </section>
+
+    <!-- Course Grid Section -->
+    <section class="courses-grid-section" aria-labelledby="all-courses-title">
+      <h2 class="courses-grid-section__title" id="all-courses-title">All courses</h2>
+
+      <ul class="course-grid">
+        <!-- Course 1 -->
+        <li class="course-grid__item">
+          <article class="course-card">
+            <picture class="course-card__picture">
+              <source type="image/webp" srcset="assets/img/frontend-640.webp 640w, assets/img/frontend-1280.webp 1280w" sizes="(min-width: 1280px) 380px, 100vw">
+              <img class="course-card__img" src="assets/img/frontend-640.jpg" width="640" height="360" alt="" loading="lazy">
+            </picture>
+            <div class="course-card__body">
+              <span class="course-card__category">FRONTEND</span>
+              <h3 class="course-card__title">
+                <a class="course-card__link" href="details.html">Frontend Development</a>
+              </h3>
+              <p class="course-card__author">by Emma Wilson</p>
+              <div class="course-card__meta">
+                <span class="course-card__rating">&#9733; 4.8</span>
+                <span class="course-card__duration">12 weeks</span>
+              </div>
+              <a class="button button--primary course-card__button" href="details.html">View course</a>
+            </div>
+          </article>
+        </li>
+
+        <!-- Course 2 -->
+        <li class="course-grid__item">
+          <article class="course-card">
+            <picture class="course-card__picture">
+              <source type="image/webp" srcset="assets/img/uiux-640.webp 640w, assets/img/uiux-1280.webp 1280w" sizes="(min-width: 1280px) 380px, 100vw">
+              <img class="course-card__img" src="assets/img/uiux-640.jpg" width="640" height="360" alt="" loading="lazy">
+            </picture>
+            <div class="course-card__body">
+              <span class="course-card__category">UI/UX DESIGN</span>
+              <h3 class="course-card__title">
+                <a class="course-card__link" href="details.html">UI/UX Design Fundamentals</a>
+              </h3>
+              <p class="course-card__author">by Olivia Brown</p>
+              <div class="course-card__meta">
+                <span class="course-card__rating">&#9733; 4.9</span>
+                <span class="course-card__duration">10 weeks</span>
+              </div>
+              <a class="button button--primary course-card__button" href="details.html">View course</a>
+            </div>
+          </article>
+        </li>
+
+        <!-- Course 3 -->
+        <li class="course-grid__item">
+          <article class="course-card">
+            <picture class="course-card__picture">
+              <source type="image/webp" srcset="assets/img/python-640.webp 640w, assets/img/python-1280.webp 1280w" sizes="(min-width: 1280px) 380px, 100vw">
+              <img class="course-card__img" src="assets/img/python-640.jpg" width="640" height="360" alt="" loading="lazy">
+            </picture>
+            <div class="course-card__body">
+              <span class="course-card__category">DATA SCIENCE</span>
+              <h3 class="course-card__title">
+                <a class="course-card__link" href="details.html">Python for Data Science</a>
+              </h3>
+              <p class="course-card__author">by Daniel Lee</p>
+              <div class="course-card__meta">
+                <span class="course-card__rating">&#9733; 4.7</span>
+                <span class="course-card__duration">14 weeks</span>
+              </div>
+              <a class="button button--primary course-card__button" href="details.html">View course</a>
+            </div>
+          </article>
+        </li>
+
+        <!-- Course 4 -->
+        <li class="course-grid__item">
+          <article class="course-card">
+            <picture class="course-card__picture">
+              <source type="image/webp" srcset="assets/img/backend-640.webp 640w, assets/img/backend-1280.webp 1280w" sizes="(min-width: 1280px) 380px, 100vw">
+              <img class="course-card__img" src="assets/img/backend-640.jpg" width="640" height="360" alt="" loading="lazy">
+            </picture>
+            <div class="course-card__body">
+              <span class="course-card__category">BACKEND</span>
+              <h3 class="course-card__title">
+                <a class="course-card__link" href="details.html">Backend Development</a>
+              </h3>
+              <p class="course-card__author">by James Carter</p>
+              <div class="course-card__meta">
+                <span class="course-card__rating">&#9733; 4.8</span>
+                <span class="course-card__duration">12 weeks</span>
+              </div>
+              <a class="button button--primary course-card__button" href="details.html">View course</a>
+            </div>
+          </article>
+        </li>
+
+        <!-- Course 5 -->
+        <li class="course-grid__item">
+          <article class="course-card">
+            <picture class="course-card__picture">
+              <source type="image/webp" srcset="assets/img/js-640.webp 640w, assets/img/js-1280.webp 1280w" sizes="(min-width: 1280px) 380px, 100vw">
+              <img class="course-card__img" src="assets/img/js-640.jpg" width="640" height="360" alt="" loading="lazy">
+            </picture>
+            <div class="course-card__body">
+              <span class="course-card__category">FRONTEND</span>
+              <h3 class="course-card__title">
+                <a class="course-card__link" href="details.html">JavaScript Essentials</a>
+              </h3>
+              <p class="course-card__author">by Sophia Miller</p>
+              <div class="course-card__meta">
+                <span class="course-card__rating">&#9733; 4.6</span>
+                <span class="course-card__duration">8 weeks</span>
+              </div>
+              <a class="button button--primary course-card__button" href="details.html">View course</a>
+            </div>
+          </article>
+        </li>
+
+        <!-- Course 6 -->
+        <li class="course-grid__item">
+          <article class="course-card">
+            <picture class="course-card__picture">
+              <source type="image/webp" srcset="assets/img/advanced-ui-640.webp 640w, assets/img/advanced-ui-1280.webp 1280w" sizes="(min-width: 1280px) 380px, 100vw">
+              <img class="course-card__img" src="assets/img/advanced-ui-640.jpg" width="640" height="360" alt="" loading="lazy">
+            </picture>
+            <div class="course-card__body">
+              <span class="course-card__category">UI/UX DESIGN</span>
+              <h3 class="course-card__title">
+                <a class="course-card__link" href="details.html">Advanced UI Design</a>
+              </h3>
+              <p class="course-card__author">by Alex Morgan</p>
+              <div class="course-card__meta">
+                <span class="course-card__rating">&#9733; 4.9</span>
+                <span class="course-card__duration">10 weeks</span>
+              </div>
+              <a class="button button--primary course-card__button" href="details.html">View course</a>
+            </div>
+          </article>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="footer__main">
+      <div class="footer__brand">
+        <a class="footer__logo" href="index.html">Codeva</a>
+        <p class="footer__tagline">Learn today. Build tomorrow.</p>
+      </div>
+
+      <nav class="footer__nav" aria-label="Footer Navigation">
+        <ul class="footer__list">
+          <li><a class="footer__link" href="index.html">Home</a></li>
+          <li><a class="footer__link" href="list.html" aria-current="page">Courses</a></li>
+          <li><a class="footer__link" href="form.html">Enrollment</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="footer__bottom">
+      <p class="footer__copyright">&copy; 2026 Codeva. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

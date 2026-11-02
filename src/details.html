@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Frontend Development | Codeva</title>
+  <meta name="description" content="Learn to build modern, responsive websites using HTML, CSS and JavaScript.">
+
+  <!-- Schema.org Microdata (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    "name": "Frontend Development",
+    "description": "Learn to build modern, responsive websites using HTML, CSS and JavaScript.",
+    "provider": {
+      "@type": "Organization",
+      "name": "Codeva"
+    }
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Header Section -->
+  <header class="header">
+    <a class="header__logo" href="index.html" aria-label="Codeva Home Page">
+      <span class="header__logo-text">Codeva</span>
+    </a>
+
+    <nav class="nav" aria-label="Main Navigation">
+      <ul class="nav__list">
+        <li class="nav__item">
+          <a class="nav__link" href="index.html">Home</a>
+        </li>
+        <li class="nav__item">
+          <a class="nav__link" href="list.html">Courses</a>
+        </li>
+      </ul>
+    </nav>
+
+    <a class="button button--primary header__action" href="form.html">Enroll now</a>
+  </header>
+
+  <!-- Main Course Details Content -->
+  <main id="main">
+    <article class="course-details">
+      <!-- Course Hero Section -->
+      <section class="course-hero" aria-labelledby="course-title">
+        <div class="course-hero__main">
+          <span class="course-hero__category">FRONTEND</span>
+          <h1 class="course-hero__title" id="course-title">Frontend Development</h1>
+          <p class="course-hero__subtitle">
+            Learn to build modern, responsive websites using HTML, CSS and JavaScript.
+          </p>
+          
+          <dl class="course-meta">
+            <dt class="visually-hidden">Rating</dt>
+            <dd class="course-meta__item">&#9733; 4.8</dd>
+            <dt class="visually-hidden">Duration</dt>
+            <dd class="course-meta__item">12 weeks</dd>
+            <dt class="visually-hidden">Skill Level</dt>
+            <dd class="course-meta__item">Beginner</dd>
+          </dl>
+        </div>
+
+        <aside class="course-cta-card" aria-label="Enrollment widget">
+          <h2 class="course-cta-card__title">Ready to start?</h2>
+          <p class="course-cta-card__text">Join the course and start building your frontend skills.</p>
+          <a class="button button--primary course-cta-card__button" href="form.html">Enroll now</a>
+        </aside>
+      </section>
+
+      <!-- About Course Section -->
+      <section class="course-section" aria-labelledby="about-title">
+        <h2 class="course-section__title" id="about-title">About this course</h2>
+        <p class="course-section__text">
+          This course introduces the fundamentals of frontend development and teaches you how to create modern, responsive websites. You will work with HTML, CSS and JavaScript while building practical projects and developing skills you can apply in real-world development.
+        </p>
+      </section>
+
+      <!-- Learning Outcomes Section -->
+      <section class="course-section" aria-labelledby="outcomes-title">
+        <h2 class="course-section__title" id="outcomes-title">What you'll learn</h2>
+        <ul class="outcomes-list">
+          <li class="outcomes-list__item">&#10003; Build responsive layouts</li>
+          <li class="outcomes-list__item">&#10003; Structure pages with HTML &amp; CSS</li>
+          <li class="outcomes-list__item">&#10003; Add interactivity with JavaScript</li>
+          <li class="outcomes-list__item">&#10003; Work with APIs and real-world data</li>
+        </ul>
+      </section>
+
+      <!-- Syllabus / Curriculum Section (Таблична структура для вимог ЛР2) -->
+      <section class="course-section" aria-labelledby="curriculum-title">
+        <h2 class="course-section__title" id="curriculum-title">Course Syllabus</h2>
+        <table class="syllabus-table">
+          <caption>Weekly learning breakdown</caption>
+          <thead>
+            <tr>
+              <th scope="col">Week</th>
+              <th scope="col">Topic</th>
+              <th scope="col">Duration</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Weeks 1–4</th>
+              <td>HTML5 Semantic Structure &amp; CSS Layouts</td>
+              <td>4 Weeks</td>
+            </tr>
+            <tr>
+              <th scope="row">Weeks 5–8</th>
+              <td>JavaScript Fundamentals &amp; DOM Manipulation</td>
+              <td>4 Weeks</td>
+            </tr>
+            <tr>
+              <th scope="row">Weeks 9–12</th>
+              <td>Asynchronous JS, Fetch API &amp; Capstone Project</td>
+              <td>4 Weeks</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Instructor Section -->
+      <section class="course-section" aria-labelledby="instructor-title">
+        <h2 class="course-section__title" id="instructor-title">Instructor</h2>
+        <article class="instructor-card">
+          <picture class="instructor-card__picture">
+            <source type="image/webp" srcset="assets/img/emma-160.webp 1x, assets/img/emma-320.webp 2x">
+            <img class="instructor-card__avatar" src="assets/img/emma-160.jpg" width="80" height="80" alt="Emma Wilson" loading="lazy">
+          </picture>
+          <div class="instructor-card__info">
+            <h3 class="instructor-card__name">Emma Wilson</h3>
+            <p class="instructor-card__role">Frontend Developer &amp; Instructor</p>
+            <p class="instructor-card__bio">
+              Frontend developer with 7+ years of experience building modern web applications.
+            </p>
+          </div>
+        </article>
+      </section>
+
+      <!-- Reviews Section -->
+      <section class="course-section" aria-labelledby="reviews-title">
+        <h2 class="course-section__title" id="reviews-title">Student reviews</h2>
+        <ul class="reviews-grid">
+          <li class="reviews-grid__item">
+            <blockquote class="review-card">
+              <p class="review-card__rating" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+              <p class="review-card__text">&ldquo;Clear explanations and practical projects. A great course for beginners.&rdquo;</p>
+              <cite class="review-card__author">&mdash; Sarah Johnson</cite>
+            </blockquote>
+          </li>
+          <li class="reviews-grid__item">
+            <blockquote class="review-card">
+              <p class="review-card__rating" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</p>
+              <p class="review-card__text">&ldquo;I finally understand how HTML, CSS and JavaScript work together.&rdquo;</p>
+              <cite class="review-card__author">&mdash; Michael Brown</cite>
+            </blockquote>
+          </li>
+          <li class="reviews-grid__item">
+            <blockquote class="review-card">
+              <p class="review-card__rating" aria-label="3 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9734;</p>
+              <p class="review-card__text">&ldquo;Good course with useful examples, but I would have liked more advanced JavaScript topics.&rdquo;</p>
+              <cite class="review-card__author">&mdash; Emily Davis</cite>
+            </blockquote>
+          </li>
+        </ul>
+      </section>
+    </article>
+  </main>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="footer__main">
+      <div class="footer__brand">
+        <a class="footer__logo" href="index.html">Codeva</a>
+        <p class="footer__tagline">Learn today. Build tomorrow.</p>
+      </div>
+
+      <nav class="footer__nav" aria-label="Footer Navigation">
+        <ul class="footer__list">
+          <li><a class="footer__link" href="index.html">Home</a></li>
+          <li><a class="footer__link" href="list.html">Courses</a></li>
+          <li><a class="footer__link" href="form.html">Enrollment</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="footer__bottom">
+      <p class="footer__copyright">&copy; 2026 Codeva. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
