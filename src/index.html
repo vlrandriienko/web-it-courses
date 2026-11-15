@@ -15,7 +15,7 @@
 
   <!-- Шапка сайту зі спільного EJS-шаблону -->
   <!-- Початок EJS:header {"active":"home"} -->
-  <!-- Спільна шапка сайту: логотип, навігація та посилання для запису -->
+  <!-- Спільна шапка сайту: логотип і навігація; запис доступний зі сторінки курсу -->
   <header class="header">
     <a class="header__logo" href="index.html" aria-label="Codeva Home Page" data-i18n-aria-label="header.accessibleCodevaHomePage">
       <span class="header__logo-text">Codeva</span>
@@ -31,8 +31,6 @@
         </li>
       </ul>
     </nav>
-
-    <a class="button button--primary header__action" href="form.html" data-i18n="common.enroll">Enroll now</a>
   </header>
   <!-- Кінець EJS:header -->
 
@@ -161,28 +159,28 @@
         <li class="category-grid__item">
           <article class="category-item">
             <h3 class="category-item__title">
-              <a class="category-item__link" href="list.html" data-i18n="home.categoryItemLink">Frontend</a>
+              <a class="category-item__link" href="list.html?category=frontend" data-i18n="home.categoryItemLink">Frontend</a>
             </h3>
           </article>
         </li>
         <li class="category-grid__item">
           <article class="category-item">
             <h3 class="category-item__title">
-              <a class="category-item__link" href="list.html" data-i18n="home.categoryItemLink2">Backend</a>
+              <a class="category-item__link" href="list.html?category=backend" data-i18n="home.categoryItemLink2">Backend</a>
             </h3>
           </article>
         </li>
         <li class="category-grid__item">
           <article class="category-item">
             <h3 class="category-item__title">
-              <a class="category-item__link" href="list.html" data-i18n="home.categoryItemLink3">UI/UX Design</a>
+              <a class="category-item__link" href="list.html?category=uiux-design" data-i18n="home.categoryItemLink3">UI/UX Design</a>
             </h3>
           </article>
         </li>
         <li class="category-grid__item">
           <article class="category-item">
             <h3 class="category-item__title">
-              <a class="category-item__link" href="list.html" data-i18n="home.categoryItemLink4">Data Science</a>
+              <a class="category-item__link" href="list.html?category=data-science" data-i18n="home.categoryItemLink4">Data Science</a>
             </h3>
           </article>
         </li>
