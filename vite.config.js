@@ -6,7 +6,7 @@ import { renderPages } from './scripts/render-pages.mjs';
 // Корінь вихідних сторінок і спільні дані карток із desktop-макета Figma.
 const root = fileURLToPath(new URL('./src/', import.meta.url));
 
-// Шаблони зберігаються окремо: HTML-сторінки завжди містять готову розмітку.
+// EJS використовується лише для шапки, підвалу та картки; сторінки зберігаються в HTML.
 function renderEjsPages() {
   return {
     name: 'render-ejs-pages',
@@ -15,10 +15,9 @@ function renderEjsPages() {
       await renderPages();
       // Зміни шаблонів або даних автоматично оновлюють усі чотири сторінки.
       const refresh = async (file) => {
-        const isTemplate = file.endsWith('.ejs') && (
-          file.startsWith(join(root, 'pages')) || file.startsWith(join(root, 'partials'))
-        );
-        if (!isTemplate && file !== join(root, 'data', 'courses.json')) return;
+        const isTemplate = file.endsWith('.ejs') && file.startsWith(join(root, 'partials'));
+        const isPage = ['index', 'list', 'details', 'form'].some((page) => file === join(root, `${page}.html`));
+        if (!isTemplate && !isPage && file !== join(root, 'data', 'courses.json')) return;
         try {
           await renderPages();
           server.ws.send({ type: 'full-reload' });

@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- Згенеровано з src/pages/details.ejs; редагуйте шаблон і виконайте npm run render. -->
 <html lang="en">
 <head>
   <!-- Метадані документа та налаштування відображення -->
@@ -29,7 +28,8 @@
   <a class="skip-link" href="#main" data-i18n="details.skipLink">Skip to content</a>
 
   <!-- Шапка сайту зі спільного EJS-шаблону -->
-    <!-- Спільна шапка сайту: логотип, навігація та посилання для запису -->
+  <!-- Початок EJS:header {"active":""} -->
+  <!-- Спільна шапка сайту: логотип, навігація та посилання для запису -->
   <header class="header">
     <a class="header__logo" href="index.html" aria-label="Codeva Home Page" data-i18n-aria-label="header.accessibleCodevaHomePage">
       <span class="header__logo-text">Codeva</span>
@@ -48,7 +48,7 @@
 
     <a class="button button--primary header__action" href="form.html" data-i18n="common.enroll">Enroll now</a>
   </header>
-
+  <!-- Кінець EJS:header -->
 
   <!-- Основний вміст сторінки курсу -->
   <main id="main" tabindex="-1">
@@ -148,7 +148,8 @@
   </main>
 
   <!-- Підвал сайту зі спільного EJS-шаблону -->
-    <!-- Спільний підвал сайту: бренд, навігація та авторські права -->
+  <!-- Початок EJS:footer {"active":""} -->
+  <!-- Спільний підвал сайту: бренд, навігація та авторські права -->
   <footer class="footer">
     <div class="footer__main">
       <div class="footer__brand">
@@ -170,6 +171,6 @@
       <p class="footer__copyright" data-i18n="footer.footerCopyright">&copy; 2026 Codeva. All rights reserved.</p>
     </div>
   </footer>
-
+  <!-- Кінець EJS:footer -->
 </body>
 </html>

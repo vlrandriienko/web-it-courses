@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- Згенеровано з src/pages/list.ejs; редагуйте шаблон і виконайте npm run render. -->
 <html lang="en">
 <head>
   <!-- Метадані документа та налаштування відображення -->
@@ -15,7 +14,8 @@
   <a class="skip-link" href="#main" data-i18n="courses.skipLink">Skip to content</a>
 
   <!-- Шапка сайту зі спільного EJS-шаблону -->
-    <!-- Спільна шапка сайту: логотип, навігація та посилання для запису -->
+  <!-- Початок EJS:header {"active":"courses"} -->
+  <!-- Спільна шапка сайту: логотип, навігація та посилання для запису -->
   <header class="header">
     <a class="header__logo" href="index.html" aria-label="Codeva Home Page" data-i18n-aria-label="header.accessibleCodevaHomePage">
       <span class="header__logo-text">Codeva</span>
@@ -34,7 +34,7 @@
 
     <a class="button button--primary header__action" href="form.html" data-i18n="common.enroll">Enroll now</a>
   </header>
-
+  <!-- Кінець EJS:header -->
 
   <!-- Основний вміст каталогу курсів -->
   <main id="main" tabindex="-1">
@@ -64,165 +64,172 @@
       <ul class="course-grid">
         <!-- Картка курсу 1: підключення спільного шаблону -->
         <li class="course-grid__item">
+          <!-- Початок EJS:course-card {"course":"frontend"} -->
           <!-- Спільна картка курсу: дані передаються в EJS через об’єкт course -->
-<article class="course-card">
-  <!-- Адаптивне зображення: до 680 px; у вузькому вікні враховані відступи сторінки та списку -->
-  <picture class="course-card__picture">
-    <source type="image/webp" srcset="assets/img/course-preview-340.webp 340w, assets/img/course-preview-680.webp 680w, assets/img/course-preview-1360.webp 1360w" sizes="(min-width: 736px) 680px, calc(100vw - 56px)">
-    <img class="course-card__img" src="assets/img/course-preview-680.jpg" srcset="assets/img/course-preview-340.jpg 340w, assets/img/course-preview-680.jpg 680w, assets/img/course-preview-1360.jpg 1360w" sizes="(min-width: 736px) 680px, calc(100vw - 56px)" width="680" height="360" alt="" loading="lazy">
-  </picture>
-  <!-- Назва, автор, рейтинг і посилання на сторінку курсу -->
-  <div class="course-card__body">
-    <span class="course-card__category" data-i18n="catalog.frontend.category">FRONTEND</span>
-    <h3 class="course-card__title">
-      <a class="course-card__link" data-i18n="catalog.frontend.title" href="details.html">Frontend Development</a>
-    </h3>
-    <p class="course-card__author" data-i18n="catalog.frontend.author">by Emma Wilson</p>
-    <div class="course-card__meta">
-      <span class="course-card__rating">&#9733; 4.8</span>
-      <span class="course-card__duration" data-i18n="catalog.frontend.duration">12 weeks</span>
-    </div>
-    <a class="button button--primary course-card__button" href="details.html" data-i18n="common.viewCourse">View course</a>
-  </div>
-</article>
-
+          <article class="course-card">
+            <!-- Адаптивне зображення: до 680 px; у вузькому вікні враховані відступи сторінки та списку -->
+            <picture class="course-card__picture">
+              <source type="image/webp" srcset="assets/img/course-preview-340.webp 340w, assets/img/course-preview-680.webp 680w, assets/img/course-preview-1360.webp 1360w" sizes="(min-width: 736px) 680px, calc(100vw - 56px)">
+              <img class="course-card__img" src="assets/img/course-preview-680.jpg" srcset="assets/img/course-preview-340.jpg 340w, assets/img/course-preview-680.jpg 680w, assets/img/course-preview-1360.jpg 1360w" sizes="(min-width: 736px) 680px, calc(100vw - 56px)" width="680" height="360" alt="" loading="lazy">
+            </picture>
+            <!-- Назва, автор, рейтинг і посилання на сторінку курсу -->
+            <div class="course-card__body">
+              <span class="course-card__category" data-i18n="catalog.frontend.category">FRONTEND</span>
+              <h3 class="course-card__title">
+                <a class="course-card__link" data-i18n="catalog.frontend.title" href="details.html">Frontend Development</a>
+              </h3>
+              <p class="course-card__author" data-i18n="catalog.frontend.author">by Emma Wilson</p>
+              <div class="course-card__meta">
+                <span class="course-card__rating">&#9733; 4.8</span>
+                <span class="course-card__duration" data-i18n="catalog.frontend.duration">12 weeks</span>
+              </div>
+              <a class="button button--primary course-card__button" href="details.html" data-i18n="common.viewCourse">View course</a>
+            </div>
+          </article>
+          <!-- Кінець EJS:course-card -->
         </li>
 
         <!-- Картка курсу 2: підключення спільного шаблону -->
         <li class="course-grid__item">
+          <!-- Початок EJS:course-card {"course":"uiux"} -->
           <!-- Спільна картка курсу: дані передаються в EJS через об’єкт course -->
-<article class="course-card">
-  <!-- Адаптивне зображення: до 680 px; у вузькому вікні враховані відступи сторінки та списку -->
-  <picture class="course-card__picture">
-    <source type="image/webp" srcset="assets/img/course-preview-340.webp 340w, assets/img/course-preview-680.webp 680w, assets/img/course-preview-1360.webp 1360w" sizes="(min-width: 736px) 680px, calc(100vw - 56px)">
-    <img class="course-card__img" src="assets/img/course-preview-680.jpg" srcset="assets/img/course-preview-340.jpg 340w, assets/img/course-preview-680.jpg 680w, assets/img/course-preview-1360.jpg 1360w" sizes="(min-width: 736px) 680px, calc(100vw - 56px)" width="680" height="360" alt="" loading="lazy">
-  </picture>
-  <!-- Назва, автор, рейтинг і посилання на сторінку курсу -->
-  <div class="course-card__body">
-    <span class="course-card__category" data-i18n="catalog.uiux.category">UI/UX DESIGN</span>
-    <h3 class="course-card__title">
-      <a class="course-card__link" data-i18n="catalog.uiux.title" href="details.html">UI/UX Design Fundamentals</a>
-    </h3>
-    <p class="course-card__author" data-i18n="catalog.uiux.author">by Olivia Brown</p>
-    <div class="course-card__meta">
-      <span class="course-card__rating">&#9733; 4.9</span>
-      <span class="course-card__duration" data-i18n="catalog.uiux.duration">10 weeks</span>
-    </div>
-    <a class="button button--primary course-card__button" href="details.html" data-i18n="common.viewCourse">View course</a>
-  </div>
-</article>
-
+          <article class="course-card">
+            <!-- Адаптивне зображення: до 680 px; у вузькому вікні враховані відступи сторінки та списку -->
+            <picture class="course-card__picture">
+              <source type="image/webp" srcset="assets/img/course-preview-340.webp 340w, assets/img/course-preview-680.webp 680w, assets/img/course-preview-1360.webp 1360w" sizes="(min-width: 736px) 680px, calc(100vw - 56px)">
+              <img class="course-card__img" src="assets/img/course-preview-680.jpg" srcset="assets/img/course-preview-340.jpg 340w, assets/img/course-preview-680.jpg 680w, assets/img/course-preview-1360.jpg 1360w" sizes="(min-width: 736px) 680px, calc(100vw - 56px)" width="680" height="360" alt="" loading="lazy">
+            </picture>
+            <!-- Назва, автор, рейтинг і посилання на сторінку курсу -->
+            <div class="course-card__body">
+              <span class="course-card__category" data-i18n="catalog.uiux.category">UI/UX DESIGN</span>
+              <h3 class="course-card__title">
+                <a class="course-card__link" data-i18n="catalog.uiux.title" href="details.html">UI/UX Design Fundamentals</a>
+              </h3>
+              <p class="course-card__author" data-i18n="catalog.uiux.author">by Olivia Brown</p>
+              <div class="course-card__meta">
+                <span class="course-card__rating">&#9733; 4.9</span>
+                <span class="course-card__duration" data-i18n="catalog.uiux.duration">10 weeks</span>
+              </div>
+              <a class="button button--primary course-card__button" href="details.html" data-i18n="common.viewCourse">View course</a>
+            </div>
+          </article>
+          <!-- Кінець EJS:course-card -->
         </li>
 
         <!-- Картка курсу 3: підключення спільного шаблону -->
         <li class="course-grid__item">
+          <!-- Початок EJS:course-card {"course":"python"} -->
           <!-- Спільна картка курсу: дані передаються в EJS через об’єкт course -->
-<article class="course-card">
-  <!-- Адаптивне зображення: до 680 px; у вузькому вікні враховані відступи сторінки та списку -->
-  <picture class="course-card__picture">
-    <source type="image/webp" srcset="assets/img/course-preview-340.webp 340w, assets/img/course-preview-680.webp 680w, assets/img/course-preview-1360.webp 1360w" sizes="(min-width: 736px) 680px, calc(100vw - 56px)">
-    <img class="course-card__img" src="assets/img/course-preview-680.jpg" srcset="assets/img/course-preview-340.jpg 340w, assets/img/course-preview-680.jpg 680w, assets/img/course-preview-1360.jpg 1360w" sizes="(min-width: 736px) 680px, calc(100vw - 56px)" width="680" height="360" alt="" loading="lazy">
-  </picture>
-  <!-- Назва, автор, рейтинг і посилання на сторінку курсу -->
-  <div class="course-card__body">
-    <span class="course-card__category" data-i18n="catalog.python.category">DATA SCIENCE</span>
-    <h3 class="course-card__title">
-      <a class="course-card__link" data-i18n="catalog.python.title" href="details.html">Python for Data Science</a>
-    </h3>
-    <p class="course-card__author" data-i18n="catalog.python.author">by Daniel Lee</p>
-    <div class="course-card__meta">
-      <span class="course-card__rating">&#9733; 4.7</span>
-      <span class="course-card__duration" data-i18n="catalog.python.duration">14 weeks</span>
-    </div>
-    <a class="button button--primary course-card__button" href="details.html" data-i18n="common.viewCourse">View course</a>
-  </div>
-</article>
-
+          <article class="course-card">
+            <!-- Адаптивне зображення: до 680 px; у вузькому вікні враховані відступи сторінки та списку -->
+            <picture class="course-card__picture">
+              <source type="image/webp" srcset="assets/img/course-preview-340.webp 340w, assets/img/course-preview-680.webp 680w, assets/img/course-preview-1360.webp 1360w" sizes="(min-width: 736px) 680px, calc(100vw - 56px)">
+              <img class="course-card__img" src="assets/img/course-preview-680.jpg" srcset="assets/img/course-preview-340.jpg 340w, assets/img/course-preview-680.jpg 680w, assets/img/course-preview-1360.jpg 1360w" sizes="(min-width: 736px) 680px, calc(100vw - 56px)" width="680" height="360" alt="" loading="lazy">
+            </picture>
+            <!-- Назва, автор, рейтинг і посилання на сторінку курсу -->
+            <div class="course-card__body">
+              <span class="course-card__category" data-i18n="catalog.python.category">DATA SCIENCE</span>
+              <h3 class="course-card__title">
+                <a class="course-card__link" data-i18n="catalog.python.title" href="details.html">Python for Data Science</a>
+              </h3>
+              <p class="course-card__author" data-i18n="catalog.python.author">by Daniel Lee</p>
+              <div class="course-card__meta">
+                <span class="course-card__rating">&#9733; 4.7</span>
+                <span class="course-card__duration" data-i18n="catalog.python.duration">14 weeks</span>
+              </div>
+              <a class="button button--primary course-card__button" href="details.html" data-i18n="common.viewCourse">View course</a>
+            </div>
+          </article>
+          <!-- Кінець EJS:course-card -->
         </li>
 
         <!-- Картка курсу 4: підключення спільного шаблону -->
         <li class="course-grid__item">
+          <!-- Початок EJS:course-card {"course":"backend"} -->
           <!-- Спільна картка курсу: дані передаються в EJS через об’єкт course -->
-<article class="course-card">
-  <!-- Адаптивне зображення: до 680 px; у вузькому вікні враховані відступи сторінки та списку -->
-  <picture class="course-card__picture">
-    <source type="image/webp" srcset="assets/img/course-preview-340.webp 340w, assets/img/course-preview-680.webp 680w, assets/img/course-preview-1360.webp 1360w" sizes="(min-width: 736px) 680px, calc(100vw - 56px)">
-    <img class="course-card__img" src="assets/img/course-preview-680.jpg" srcset="assets/img/course-preview-340.jpg 340w, assets/img/course-preview-680.jpg 680w, assets/img/course-preview-1360.jpg 1360w" sizes="(min-width: 736px) 680px, calc(100vw - 56px)" width="680" height="360" alt="" loading="lazy">
-  </picture>
-  <!-- Назва, автор, рейтинг і посилання на сторінку курсу -->
-  <div class="course-card__body">
-    <span class="course-card__category" data-i18n="catalog.backend.category">BACKEND</span>
-    <h3 class="course-card__title">
-      <a class="course-card__link" data-i18n="catalog.backend.title" href="details.html">Backend Development</a>
-    </h3>
-    <p class="course-card__author" data-i18n="catalog.backend.author">by James Carter</p>
-    <div class="course-card__meta">
-      <span class="course-card__rating">&#9733; 4.8</span>
-      <span class="course-card__duration" data-i18n="catalog.backend.duration">12 weeks</span>
-    </div>
-    <a class="button button--primary course-card__button" href="details.html" data-i18n="common.viewCourse">View course</a>
-  </div>
-</article>
-
+          <article class="course-card">
+            <!-- Адаптивне зображення: до 680 px; у вузькому вікні враховані відступи сторінки та списку -->
+            <picture class="course-card__picture">
+              <source type="image/webp" srcset="assets/img/course-preview-340.webp 340w, assets/img/course-preview-680.webp 680w, assets/img/course-preview-1360.webp 1360w" sizes="(min-width: 736px) 680px, calc(100vw - 56px)">
+              <img class="course-card__img" src="assets/img/course-preview-680.jpg" srcset="assets/img/course-preview-340.jpg 340w, assets/img/course-preview-680.jpg 680w, assets/img/course-preview-1360.jpg 1360w" sizes="(min-width: 736px) 680px, calc(100vw - 56px)" width="680" height="360" alt="" loading="lazy">
+            </picture>
+            <!-- Назва, автор, рейтинг і посилання на сторінку курсу -->
+            <div class="course-card__body">
+              <span class="course-card__category" data-i18n="catalog.backend.category">BACKEND</span>
+              <h3 class="course-card__title">
+                <a class="course-card__link" data-i18n="catalog.backend.title" href="details.html">Backend Development</a>
+              </h3>
+              <p class="course-card__author" data-i18n="catalog.backend.author">by James Carter</p>
+              <div class="course-card__meta">
+                <span class="course-card__rating">&#9733; 4.8</span>
+                <span class="course-card__duration" data-i18n="catalog.backend.duration">12 weeks</span>
+              </div>
+              <a class="button button--primary course-card__button" href="details.html" data-i18n="common.viewCourse">View course</a>
+            </div>
+          </article>
+          <!-- Кінець EJS:course-card -->
         </li>
 
         <!-- Картка курсу 5: підключення спільного шаблону -->
         <li class="course-grid__item">
+          <!-- Початок EJS:course-card {"course":"javascript"} -->
           <!-- Спільна картка курсу: дані передаються в EJS через об’єкт course -->
-<article class="course-card">
-  <!-- Адаптивне зображення: до 680 px; у вузькому вікні враховані відступи сторінки та списку -->
-  <picture class="course-card__picture">
-    <source type="image/webp" srcset="assets/img/course-preview-340.webp 340w, assets/img/course-preview-680.webp 680w, assets/img/course-preview-1360.webp 1360w" sizes="(min-width: 736px) 680px, calc(100vw - 56px)">
-    <img class="course-card__img" src="assets/img/course-preview-680.jpg" srcset="assets/img/course-preview-340.jpg 340w, assets/img/course-preview-680.jpg 680w, assets/img/course-preview-1360.jpg 1360w" sizes="(min-width: 736px) 680px, calc(100vw - 56px)" width="680" height="360" alt="" loading="lazy">
-  </picture>
-  <!-- Назва, автор, рейтинг і посилання на сторінку курсу -->
-  <div class="course-card__body">
-    <span class="course-card__category" data-i18n="catalog.javascript.category">FRONTEND</span>
-    <h3 class="course-card__title">
-      <a class="course-card__link" data-i18n="catalog.javascript.title" href="details.html">JavaScript Essentials</a>
-    </h3>
-    <p class="course-card__author" data-i18n="catalog.javascript.author">by Sophia Miller</p>
-    <div class="course-card__meta">
-      <span class="course-card__rating">&#9733; 4.6</span>
-      <span class="course-card__duration" data-i18n="catalog.javascript.duration">8 weeks</span>
-    </div>
-    <a class="button button--primary course-card__button" href="details.html" data-i18n="common.viewCourse">View course</a>
-  </div>
-</article>
-
+          <article class="course-card">
+            <!-- Адаптивне зображення: до 680 px; у вузькому вікні враховані відступи сторінки та списку -->
+            <picture class="course-card__picture">
+              <source type="image/webp" srcset="assets/img/course-preview-340.webp 340w, assets/img/course-preview-680.webp 680w, assets/img/course-preview-1360.webp 1360w" sizes="(min-width: 736px) 680px, calc(100vw - 56px)">
+              <img class="course-card__img" src="assets/img/course-preview-680.jpg" srcset="assets/img/course-preview-340.jpg 340w, assets/img/course-preview-680.jpg 680w, assets/img/course-preview-1360.jpg 1360w" sizes="(min-width: 736px) 680px, calc(100vw - 56px)" width="680" height="360" alt="" loading="lazy">
+            </picture>
+            <!-- Назва, автор, рейтинг і посилання на сторінку курсу -->
+            <div class="course-card__body">
+              <span class="course-card__category" data-i18n="catalog.javascript.category">FRONTEND</span>
+              <h3 class="course-card__title">
+                <a class="course-card__link" data-i18n="catalog.javascript.title" href="details.html">JavaScript Essentials</a>
+              </h3>
+              <p class="course-card__author" data-i18n="catalog.javascript.author">by Sophia Miller</p>
+              <div class="course-card__meta">
+                <span class="course-card__rating">&#9733; 4.6</span>
+                <span class="course-card__duration" data-i18n="catalog.javascript.duration">8 weeks</span>
+              </div>
+              <a class="button button--primary course-card__button" href="details.html" data-i18n="common.viewCourse">View course</a>
+            </div>
+          </article>
+          <!-- Кінець EJS:course-card -->
         </li>
 
         <!-- Картка курсу 6: підключення спільного шаблону -->
         <li class="course-grid__item">
+          <!-- Початок EJS:course-card {"course":"advanced-ui"} -->
           <!-- Спільна картка курсу: дані передаються в EJS через об’єкт course -->
-<article class="course-card">
-  <!-- Адаптивне зображення: до 680 px; у вузькому вікні враховані відступи сторінки та списку -->
-  <picture class="course-card__picture">
-    <source type="image/webp" srcset="assets/img/course-preview-340.webp 340w, assets/img/course-preview-680.webp 680w, assets/img/course-preview-1360.webp 1360w" sizes="(min-width: 736px) 680px, calc(100vw - 56px)">
-    <img class="course-card__img" src="assets/img/course-preview-680.jpg" srcset="assets/img/course-preview-340.jpg 340w, assets/img/course-preview-680.jpg 680w, assets/img/course-preview-1360.jpg 1360w" sizes="(min-width: 736px) 680px, calc(100vw - 56px)" width="680" height="360" alt="" loading="lazy">
-  </picture>
-  <!-- Назва, автор, рейтинг і посилання на сторінку курсу -->
-  <div class="course-card__body">
-    <span class="course-card__category" data-i18n="catalog.advanced-ui.category">UI/UX DESIGN</span>
-    <h3 class="course-card__title">
-      <a class="course-card__link" data-i18n="catalog.advanced-ui.title" href="details.html">Advanced UI Design</a>
-    </h3>
-    <p class="course-card__author" data-i18n="catalog.advanced-ui.author">by Alex Morgan</p>
-    <div class="course-card__meta">
-      <span class="course-card__rating">&#9733; 4.9</span>
-      <span class="course-card__duration" data-i18n="catalog.advanced-ui.duration">10 weeks</span>
-    </div>
-    <a class="button button--primary course-card__button" href="details.html" data-i18n="common.viewCourse">View course</a>
-  </div>
-</article>
-
+          <article class="course-card">
+            <!-- Адаптивне зображення: до 680 px; у вузькому вікні враховані відступи сторінки та списку -->
+            <picture class="course-card__picture">
+              <source type="image/webp" srcset="assets/img/course-preview-340.webp 340w, assets/img/course-preview-680.webp 680w, assets/img/course-preview-1360.webp 1360w" sizes="(min-width: 736px) 680px, calc(100vw - 56px)">
+              <img class="course-card__img" src="assets/img/course-preview-680.jpg" srcset="assets/img/course-preview-340.jpg 340w, assets/img/course-preview-680.jpg 680w, assets/img/course-preview-1360.jpg 1360w" sizes="(min-width: 736px) 680px, calc(100vw - 56px)" width="680" height="360" alt="" loading="lazy">
+            </picture>
+            <!-- Назва, автор, рейтинг і посилання на сторінку курсу -->
+            <div class="course-card__body">
+              <span class="course-card__category" data-i18n="catalog.advanced-ui.category">UI/UX DESIGN</span>
+              <h3 class="course-card__title">
+                <a class="course-card__link" data-i18n="catalog.advanced-ui.title" href="details.html">Advanced UI Design</a>
+              </h3>
+              <p class="course-card__author" data-i18n="catalog.advanced-ui.author">by Alex Morgan</p>
+              <div class="course-card__meta">
+                <span class="course-card__rating">&#9733; 4.9</span>
+                <span class="course-card__duration" data-i18n="catalog.advanced-ui.duration">10 weeks</span>
+              </div>
+              <a class="button button--primary course-card__button" href="details.html" data-i18n="common.viewCourse">View course</a>
+            </div>
+          </article>
+          <!-- Кінець EJS:course-card -->
         </li>
       </ul>
     </section>
   </main>
 
   <!-- Підвал сайту зі спільного EJS-шаблону -->
-    <!-- Спільний підвал сайту: бренд, навігація та авторські права -->
+  <!-- Початок EJS:footer {"active":"courses"} -->
+  <!-- Спільний підвал сайту: бренд, навігація та авторські права -->
   <footer class="footer">
     <div class="footer__main">
       <div class="footer__brand">
@@ -244,6 +251,6 @@
       <p class="footer__copyright" data-i18n="footer.footerCopyright">&copy; 2026 Codeva. All rights reserved.</p>
     </div>
   </footer>
-
+  <!-- Кінець EJS:footer -->
 </body>
 </html>
