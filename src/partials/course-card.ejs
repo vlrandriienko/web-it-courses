@@ -1,0 +1,21 @@
+<!-- Спільна картка курсу: дані передаються в EJS через об’єкт course -->
+<article class="course-card">
+  <!-- Адаптивне зображення: три розміри у WebP та JPG -->
+  <picture class="course-card__picture">
+    <source type="image/webp" srcset="assets/img/course-preview-340.webp 340w, assets/img/course-preview-680.webp 680w, assets/img/course-preview-1360.webp 1360w" sizes="(min-width: 1280px) 340px, (min-width: 768px) 45vw, calc(100vw - 72px)">
+    <img class="course-card__img" src="assets/img/course-preview-680.jpg" srcset="assets/img/course-preview-340.jpg 340w, assets/img/course-preview-680.jpg 680w, assets/img/course-preview-1360.jpg 1360w" sizes="(min-width: 1280px) 340px, (min-width: 768px) 45vw, calc(100vw - 72px)" width="680" height="360" alt="" loading="lazy">
+  </picture>
+  <!-- Назва, автор, рейтинг і посилання на сторінку курсу -->
+  <div class="course-card__body">
+    <span class="course-card__category" data-i18n="catalog.<%= course.id %>.category"><%= course.category %></span>
+    <h3 class="course-card__title">
+      <a class="course-card__link" data-i18n="catalog.<%= course.id %>.title" href="details.html"><%= course.title %></a>
+    </h3>
+    <p class="course-card__author" data-i18n="catalog.<%= course.id %>.author"><%= course.author %></p>
+    <div class="course-card__meta">
+      <span class="course-card__rating">&#9733; <%= course.rating %></span>
+      <span class="course-card__duration" data-i18n="catalog.<%= course.id %>.duration"><%= course.duration %></span>
+    </div>
+    <a class="button button--primary course-card__button" href="details.html" data-i18n="common.viewCourse">View course</a>
+  </div>
+</article>

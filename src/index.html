@@ -1,201 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Метадані документа та налаштування відображення -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Codeva | Learn. Build. Grow.</title>
+  <title data-i18n="home.title">Codeva | Learn. Build. Grow.</title>
   <meta name="description" content="Build practical IT skills with expert-led online courses designed for your growth.">
 </head>
 <body>
-  <!-- Клавіша швидкого переходу для доступності -->
-  <a class="skip-link" href="#main">Skip to content</a>
+  <!-- Посилання швидкого переходу до основного вмісту -->
+  <a class="skip-link" href="#main" data-i18n="home.skipLink">Skip to content</a>
 
-  <!-- Header Section -->
-  <header class="header">
-    <a class="header__logo" href="index.html" aria-label="Codeva Home Page">
-      <span class="header__logo-text">Codeva</span>
-    </a>
+  <!-- Шапка сайту зі спільного EJS-шаблону -->
+  <%- include('partials/header', { active: 'home' }) %>
 
-    <nav class="nav" aria-label="Main Navigation">
-      <ul class="nav__list">
-        <li class="nav__item">
-          <a class="nav__link nav__link--active" href="index.html" aria-current="page">Home</a>
-        </li>
-        <li class="nav__item">
-          <a class="nav__link" href="list.html">Courses</a>
-        </li>
-      </ul>
-    </nav>
-
-    <a class="button button--primary header__action" href="form.html">Enroll now</a>
-  </header>
-
-  <!-- Main Content Area -->
+  <!-- Основний вміст головної сторінки -->
   <main id="main">
-    <!-- Hero Section -->
+    <!-- Вступний блок головної сторінки -->
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero__content">
         <h1 class="hero__title" id="hero-title">
-          Learn. Build. <span class="hero__title-accent">Grow.</span>
+          <span data-i18n="home.titleStart">Learn. Build.</span> <span class="hero__title-accent" data-i18n="home.titleAccent">Grow.</span>
         </h1>
-        <p class="hero__description">
+        <p class="hero__description" data-i18n="home.heroDescription">
           Build practical IT skills with expert-led online courses designed for your growth.
         </p>
-        <a class="button button--primary" href="list.html">Explore courses</a>
+        <a class="button button--primary" href="list.html" data-i18n="home.button">Explore courses</a>
       </div>
 
-      <!-- Hero Card Widget -->
-      <aside class="hero-card" aria-label="Start learning overview">
-        <h2 class="hero-card__title">Start learning today</h2>
-        <p class="hero-card__text">Choose a skill and start building your future.</p>
-        
-        <ul class="hero-card__tags" aria-label="Available skill paths">
-          <li class="hero-card__tag">&lt;/&gt; Development</li>
-          <li class="hero-card__tag">&#10022; UI/UX Design</li>
-          <li class="hero-card__tag"># Data Science</li>
+      <!-- Інформаційна картка напрямів навчання -->
+      <aside class="hero-card" aria-label="Start learning overview" data-i18n-aria-label="home.accessibleStartLearningOverview">
+        <h2 class="hero-card__title" data-i18n="home.heroCardTitle">Start learning today</h2>
+        <p class="hero-card__text" data-i18n="home.heroCardText">Choose a skill and start building your future.</p>
+
+        <ul class="hero-card__tags" aria-label="Available skill paths" data-i18n-aria-label="home.accessibleAvailableSkillPaths">
+          <li class="hero-card__tag" data-i18n="home.heroCardTag">&lt;/&gt; Development</li>
+          <li class="hero-card__tag" data-i18n="home.heroCardTag2">&#10022; UI/UX Design</li>
+          <li class="hero-card__tag" data-i18n="home.heroCardTag3"># Data Science</li>
         </ul>
-        
-        <p class="hero-card__counter">50+ courses available</p>
+
+        <p class="hero-card__counter" data-i18n="home.heroCardCounter">50+ courses available</p>
       </aside>
     </section>
 
-    <!-- Popular Courses Section -->
+    <!-- Перелік популярних курсів -->
     <section class="popular-courses" aria-labelledby="popular-title">
-      <h2 class="popular-courses__title" id="popular-title">Popular courses</h2>
+      <h2 class="popular-courses__title" id="popular-title" data-i18n="home.popular">Popular courses</h2>
 
       <ul class="course-list">
-        <!-- Course Item 1 -->
+        <!-- Картка курсу 1: підключення спільного шаблону -->
         <li class="course-list__item">
-          <article class="course-card">
-            <picture class="course-card__picture">
-              <source type="image/webp" srcset="assets/img/frontend-640.webp 640w, assets/img/frontend-1280.webp 1280w" sizes="(min-width: 1280px) 380px, 100vw">
-              <img class="course-card__img" src="assets/img/frontend-640.jpg" width="640" height="360" alt="" loading="lazy">
-            </picture>
-            <div class="course-card__body">
-              <span class="course-card__category">FRONTEND</span>
-              <h3 class="course-card__title">
-                <a class="course-card__link" href="details.html">Frontend Development</a>
-              </h3>
-              <p class="course-card__author">by Emma Wilson</p>
-              <div class="course-card__meta">
-                <span class="course-card__rating">&#9733; 4.8</span>
-                <span class="course-card__duration">12 weeks</span>
-              </div>
-              <a class="button button--primary course-card__button" href="details.html">View course</a>
-            </div>
-          </article>
+          <%- include('partials/course-card', { course: courses[0] }) %>
         </li>
 
-        <!-- Course Item 2 -->
+        <!-- Картка курсу 2: підключення спільного шаблону -->
         <li class="course-list__item">
-          <article class="course-card">
-            <picture class="course-card__picture">
-              <source type="image/webp" srcset="assets/img/uiux-640.webp 640w, assets/img/uiux-1280.webp 1280w" sizes="(min-width: 1280px) 380px, 100vw">
-              <img class="course-card__img" src="assets/img/uiux-640.jpg" width="640" height="360" alt="" loading="lazy">
-            </picture>
-            <div class="course-card__body">
-              <span class="course-card__category">UI/UX DESIGN</span>
-              <h3 class="course-card__title">
-                <a class="course-card__link" href="details.html">UI/UX Design Fundamentals</a>
-              </h3>
-              <p class="course-card__author">by Olivia Brown</p>
-              <div class="course-card__meta">
-                <span class="course-card__rating">&#9733; 4.9</span>
-                <span class="course-card__duration">10 weeks</span>
-              </div>
-              <a class="button button--primary course-card__button" href="details.html">View course</a>
-            </div>
-          </article>
+          <%- include('partials/course-card', { course: courses[1] }) %>
         </li>
 
-        <!-- Course Item 3 -->
+        <!-- Картка курсу 3: підключення спільного шаблону -->
         <li class="course-list__item">
-          <article class="course-card">
-            <picture class="course-card__picture">
-              <source type="image/webp" srcset="assets/img/python-640.webp 640w, assets/img/python-1280.webp 1280w" sizes="(min-width: 1280px) 380px, 100vw">
-              <img class="course-card__img" src="assets/img/python-640.jpg" width="640" height="360" alt="" loading="lazy">
-            </picture>
-            <div class="course-card__body">
-              <span class="course-card__category">DATA SCIENCE</span>
-              <h3 class="course-card__title">
-                <a class="course-card__link" href="details.html">Python for Data Science</a>
-              </h3>
-              <p class="course-card__author">by Daniel Lee</p>
-              <div class="course-card__meta">
-                <span class="course-card__rating">&#9733; 4.7</span>
-                <span class="course-card__duration">14 weeks</span>
-              </div>
-              <a class="button button--primary course-card__button" href="details.html">View course</a>
-            </div>
-          </article>
+          <%- include('partials/course-card', { course: courses[2] }) %>
         </li>
       </ul>
     </section>
 
-    <!-- Explore by Category Section -->
+    <!-- Навігація за категоріями курсів -->
     <section class="explore-categories" aria-labelledby="explore-title">
-      <h2 class="explore-categories__title" id="explore-title">Explore by category</h2>
+      <h2 class="explore-categories__title" id="explore-title" data-i18n="home.categories">Explore by category</h2>
 
       <ul class="category-grid">
         <li class="category-grid__item">
           <article class="category-item">
             <h3 class="category-item__title">
-              <a class="category-item__link" href="list.html">Frontend</a>
+              <a class="category-item__link" href="list.html" data-i18n="home.categoryItemLink">Frontend</a>
             </h3>
           </article>
         </li>
         <li class="category-grid__item">
           <article class="category-item">
             <h3 class="category-item__title">
-              <a class="category-item__link" href="list.html">Backend</a>
+              <a class="category-item__link" href="list.html" data-i18n="home.categoryItemLink2">Backend</a>
             </h3>
           </article>
         </li>
         <li class="category-grid__item">
           <article class="category-item">
             <h3 class="category-item__title">
-              <a class="category-item__link" href="list.html">UI/UX Design</a>
+              <a class="category-item__link" href="list.html" data-i18n="home.categoryItemLink3">UI/UX Design</a>
             </h3>
           </article>
         </li>
         <li class="category-grid__item">
           <article class="category-item">
             <h3 class="category-item__title">
-              <a class="category-item__link" href="list.html">Data Science</a>
+              <a class="category-item__link" href="list.html" data-i18n="home.categoryItemLink4">Data Science</a>
             </h3>
           </article>
         </li>
       </ul>
     </section>
 
-    <!-- CTA Section -->
+    <!-- Заклик перейти до каталогу курсів -->
     <section class="cta-banner" aria-labelledby="cta-title">
-      <h2 class="cta-banner__title" id="cta-title">Ready to start learning?</h2>
-      <p class="cta-banner__description">Explore our courses and find the right path for your goals.</p>
-      <a class="button button--primary" href="list.html">Explore courses</a>
+      <h2 class="cta-banner__title" id="cta-title" data-i18n="home.cta">Ready to start learning?</h2>
+      <p class="cta-banner__description" data-i18n="home.ctaBannerDescription">Explore our courses and find the right path for your goals.</p>
+      <a class="button button--primary" href="list.html" data-i18n="home.button">Explore courses</a>
     </section>
   </main>
 
-  <!-- Footer Section -->
-  <footer class="footer">
-    <div class="footer__main">
-      <div class="footer__brand">
-        <a class="footer__logo" href="index.html">Codeva</a>
-        <p class="footer__tagline">Learn today. Build tomorrow.</p>
-      </div>
-
-      <nav class="footer__nav" aria-label="Footer Navigation">
-        <ul class="footer__list">
-          <li><a class="footer__link" href="index.html" aria-current="page">Home</a></li>
-          <li><a class="footer__link" href="list.html">Courses</a></li>
-          <li><a class="footer__link" href="form.html">Enrollment</a></li>
-        </ul>
-      </nav>
-    </div>
-
-    <div class="footer__bottom">
-      <p class="footer__copyright">&copy; 2026 Codeva. All rights reserved.</p>
-    </div>
-  </footer>
+  <!-- Підвал сайту зі спільного EJS-шаблону -->
+  <%- include('partials/footer', { active: 'home' }) %>
 </body>
 </html>

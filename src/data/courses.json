@@ -1,0 +1,50 @@
+[
+  {
+    "id": "frontend",
+    "category": "FRONTEND",
+    "title": "Frontend Development",
+    "author": "by Emma Wilson",
+    "rating": "4.8",
+    "duration": "12 weeks"
+  },
+  {
+    "id": "uiux",
+    "category": "UI/UX DESIGN",
+    "title": "UI/UX Design Fundamentals",
+    "author": "by Olivia Brown",
+    "rating": "4.9",
+    "duration": "10 weeks"
+  },
+  {
+    "id": "python",
+    "category": "DATA SCIENCE",
+    "title": "Python for Data Science",
+    "author": "by Daniel Lee",
+    "rating": "4.7",
+    "duration": "14 weeks"
+  },
+  {
+    "id": "backend",
+    "category": "BACKEND",
+    "title": "Backend Development",
+    "author": "by James Carter",
+    "rating": "4.8",
+    "duration": "12 weeks"
+  },
+  {
+    "id": "javascript",
+    "category": "FRONTEND",
+    "title": "JavaScript Essentials",
+    "author": "by Sophia Miller",
+    "rating": "4.6",
+    "duration": "8 weeks"
+  },
+  {
+    "id": "advanced-ui",
+    "category": "UI/UX DESIGN",
+    "title": "Advanced UI Design",
+    "author": "by Alex Morgan",
+    "rating": "4.9",
+    "duration": "10 weeks"
+  }
+]

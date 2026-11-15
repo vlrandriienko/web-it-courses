@@ -1,0 +1,22 @@
+  <!-- Спільний підвал сайту: бренд, навігація та авторські права -->
+  <footer class="footer">
+    <div class="footer__main">
+      <div class="footer__brand">
+        <a class="footer__logo" href="index.html">Codeva</a>
+        <p class="footer__tagline" data-i18n="footer.footerTagline">Learn today. Build tomorrow.</p>
+      </div>
+
+      <nav class="footer__nav" aria-label="Footer Navigation" data-i18n-aria-label="footer.accessibleFooterNavigation">
+        <ul class="footer__list">
+          <li><a class="footer__link" href="index.html"<%- active === 'home' ? ' aria-current="page"' : '' %> data-i18n="nav.home">Home</a></li>
+          <li><a class="footer__link" href="list.html"<%- active === 'courses' ? ' aria-current="page"' : '' %> data-i18n="nav.courses">Courses</a></li>
+          <li><a class="footer__link" href="form.html"<%- active === 'enrollment' ? ' aria-current="page"' : '' %> data-i18n="nav.enrollment">Enrollment</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- Авторські права та завершальна інформація -->
+    <div class="footer__bottom">
+      <p class="footer__copyright" data-i18n="footer.footerCopyright">&copy; 2026 Codeva. All rights reserved.</p>
+    </div>
+  </footer>
