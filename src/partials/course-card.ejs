@@ -1,9 +1,9 @@
 <!-- Спільна картка курсу: дані передаються в EJS через об’єкт course -->
 <article class="course-card">
-  <!-- Адаптивне зображення: три розміри у WebP та JPG -->
+  <!-- Адаптивне зображення: до 680 px; у вузькому вікні враховані відступи сторінки та списку -->
   <picture class="course-card__picture">
-    <source type="image/webp" srcset="assets/img/course-preview-340.webp 340w, assets/img/course-preview-680.webp 680w, assets/img/course-preview-1360.webp 1360w" sizes="(min-width: 1280px) 340px, (min-width: 768px) 45vw, calc(100vw - 72px)">
-    <img class="course-card__img" src="assets/img/course-preview-680.jpg" srcset="assets/img/course-preview-340.jpg 340w, assets/img/course-preview-680.jpg 680w, assets/img/course-preview-1360.jpg 1360w" sizes="(min-width: 1280px) 340px, (min-width: 768px) 45vw, calc(100vw - 72px)" width="680" height="360" alt="" loading="lazy">
+    <source type="image/webp" srcset="assets/img/course-preview-340.webp 340w, assets/img/course-preview-680.webp 680w, assets/img/course-preview-1360.webp 1360w" sizes="(min-width: 736px) 680px, calc(100vw - 56px)">
+    <img class="course-card__img" src="assets/img/course-preview-680.jpg" srcset="assets/img/course-preview-340.jpg 340w, assets/img/course-preview-680.jpg 680w, assets/img/course-preview-1360.jpg 1360w" sizes="(min-width: 736px) 680px, calc(100vw - 56px)" width="680" height="360" alt="" loading="lazy">
   </picture>
   <!-- Назва, автор, рейтинг і посилання на сторінку курсу -->
   <div class="course-card__body">

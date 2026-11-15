@@ -1,0 +1,25 @@
+/* Зображення зменшуються до ширини контейнера зі збереженням пропорцій. */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Службові підписи доступні екранним читачам і не змінюють вигляд макета. */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Контрастний індикатор фокусу для навігації клавіатурою. */
+:focus-visible {
+  outline: 3px solid #005fcc;
+  outline-offset: 3px;
+}

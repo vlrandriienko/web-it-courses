@@ -1,17 +1,42 @@
-import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
+import { join } from 'node:path';
 import { defineConfig } from 'vite';
-import { ViteEjsPlugin } from 'vite-plugin-ejs';
+import { renderPages } from './scripts/render-pages.mjs';
 
 // Корінь вихідних сторінок і спільні дані карток із desktop-макета Figma.
 const root = fileURLToPath(new URL('./src/', import.meta.url));
-const courses = JSON.parse(readFileSync(new URL('./src/data/courses.json', import.meta.url), 'utf8'));
+
+// Шаблони зберігаються окремо: HTML-сторінки завжди містять готову розмітку.
+function renderEjsPages() {
+  return {
+    name: 'render-ejs-pages',
+    buildStart: renderPages,
+    async configureServer(server) {
+      await renderPages();
+      // Зміни шаблонів або даних автоматично оновлюють усі чотири сторінки.
+      const refresh = async (file) => {
+        const isTemplate = file.endsWith('.ejs') && (
+          file.startsWith(join(root, 'pages')) || file.startsWith(join(root, 'partials'))
+        );
+        if (!isTemplate && file !== join(root, 'data', 'courses.json')) return;
+        try {
+          await renderPages();
+          server.ws.send({ type: 'full-reload' });
+        } catch (error) {
+          server.config.logger.error(error.stack || error.message);
+        }
+      };
+      server.watcher.on('change', refresh);
+      server.httpServer?.once('close', () => server.watcher.off('change', refresh));
+    },
+  };
+}
 
 export default defineConfig({
   root,
   base: './',
   // EJS обробляється на сервері розробки та під час збирання готових HTML-сторінок.
-  plugins: [ViteEjsPlugin({ courses })],
+  plugins: [renderEjsPages()],
   build: {
     outDir: '../dist',
     emptyOutDir: true,

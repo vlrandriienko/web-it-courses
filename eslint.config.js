@@ -5,7 +5,7 @@ import htmlParser from '@html-eslint/parser';
 export default [
   { ignores: ['node_modules/**', 'dist/assets/**'] },
   {
-    files: ['dist/*.html'],
+    files: ['src/*.html', 'dist/*.html'],
     languageOptions: { parser: htmlParser },
     plugins: { html },
     rules: {
