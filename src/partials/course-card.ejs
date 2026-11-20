@@ -9,13 +9,13 @@
   <div class="course-card__body">
     <span class="course-card__category" data-i18n="catalog.<%= course.id %>.category"><%= course.category %></span>
     <h3 class="course-card__title">
-      <a class="course-card__link" data-i18n="catalog.<%= course.id %>.title" href="details.html"><%= course.title %></a>
+      <a class="course-card__link" data-i18n="catalog.<%= course.id %>.title" href="details.html?course=<%= course.id %>"><%= course.title %></a>
     </h3>
     <p class="course-card__author" data-i18n="catalog.<%= course.id %>.author"><%= course.author %></p>
     <div class="course-card__meta">
       <span class="course-card__rating">&#9733; <%= course.rating %></span>
       <span class="course-card__duration" data-i18n="catalog.<%= course.id %>.duration"><%= course.duration %></span>
     </div>
-    <a class="button button--primary course-card__button" href="details.html" data-i18n="common.viewCourse">View course</a>
+    <a class="button button--primary course-card__button" href="details.html?course=<%= course.id %>" data-i18n="common.viewCourse">View course</a>
   </div>
 </article>

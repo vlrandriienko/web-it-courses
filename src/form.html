@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="styles/images.css">
   <title data-i18n="enrollment.title2">Enrollment | Codeva</title>
   <meta name="description" content="Complete the form below to start your learning journey with Codeva.">
+  <script type="module" src="./course-pages.js"></script>
 </head>
 <body>
   <!-- Шапка сайту зі спільного EJS-шаблону -->
@@ -46,7 +47,8 @@
         <section class="form-container" aria-labelledby="form-title">
           <h2 class="form-container__title" id="form-title" data-i18n="enrollment.form">Enrollment form</h2>
 
-          <form class="enrollment-form" action="/enroll" method="post">
+          <form class="enrollment-form" action="form.html" method="post" aria-describedby="enrollment-note">
+            <p id="enrollment-note" data-i18n="enrollment.demoNote">This is a demo. Your details stay on this page.</p>
             <!-- Підписи та перевірка обов’язкових полів засобами браузера -->
             <fieldset class="enrollment-form__fieldset">
               <legend class="visually-hidden" data-i18n="enrollment.visuallyHidden">Student Personal Details</legend>
@@ -62,13 +64,17 @@
               </div>
 
               <!-- Курс уже вибрано в макеті, тому передаємо його прихованим полем -->
-              <input type="hidden" name="course" value="frontend-dev">
+              <input type="hidden" name="course" value="frontend">
             </fieldset>
 
-            <button class="button button--primary enrollment-form__submit" type="submit" data-i18n="enrollment.button">
+            <button class="button button--primary enrollment-form__submit" type="submit" disabled data-i18n="enrollment.button">
               Complete enrollment
             </button>
           </form>
+          <p role="status" id="enrollment-status"></p>
+          <template id="enrollment-confirmation">
+            <span data-i18n="enrollment.demoSuccess">Demo enrollment complete.</span>
+          </template>
         </section>
 
         <!-- Картка вибраного курсу -->
@@ -79,11 +85,11 @@
 
           <dl class="course-meta">
             <dt class="visually-hidden" data-i18n="enrollment.visuallyHidden2">Rating</dt>
-            <dd class="course-meta__item">&#9733; 4.8</dd>
+            <dd class="course-meta__item" data-course-rating>&#9733; 4.8</dd>
             <dt class="visually-hidden" data-i18n="enrollment.visuallyHidden3">Duration</dt>
             <dd class="course-meta__item" data-i18n="enrollment.courseMetaItem">12 weeks</dd>
-            <dt class="visually-hidden" data-i18n="enrollment.visuallyHidden4">Skill Level</dt>
-            <dd class="course-meta__item" data-i18n="enrollment.courseMetaItem2">Beginner</dd>
+            <dt class="visually-hidden" data-frontend-only data-i18n="enrollment.visuallyHidden4">Skill Level</dt>
+            <dd class="course-meta__item" data-frontend-only data-i18n="enrollment.courseMetaItem2">Beginner</dd>
           </dl>
         </aside>
       </div>

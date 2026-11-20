@@ -11,6 +11,7 @@
     "id": "uiux",
     "category": "UI/UX DESIGN",
     "title": "UI/UX Design Fundamentals",
+    "description": "Learn the fundamentals of interface design and user experience.",
     "author": "by Olivia Brown",
     "rating": "4.9",
     "duration": "10 weeks"
@@ -19,6 +20,7 @@
     "id": "python",
     "category": "DATA SCIENCE",
     "title": "Python for Data Science",
+    "description": "Explore how Python is used to work with data.",
     "author": "by Daniel Lee",
     "rating": "4.7",
     "duration": "14 weeks"
@@ -27,6 +29,7 @@
     "id": "backend",
     "category": "BACKEND",
     "title": "Backend Development",
+    "description": "Learn how the server side of web applications works.",
     "author": "by James Carter",
     "rating": "4.8",
     "duration": "12 weeks"
@@ -35,6 +38,7 @@
     "id": "javascript",
     "category": "FRONTEND",
     "title": "JavaScript Essentials",
+    "description": "Learn the core concepts of JavaScript for the web.",
     "author": "by Sophia Miller",
     "rating": "4.6",
     "duration": "8 weeks"
@@ -43,6 +47,7 @@
     "id": "advanced-ui",
     "category": "UI/UX DESIGN",
     "title": "Advanced UI Design",
+    "description": "Explore advanced approaches to designing user interfaces.",
     "author": "by Alex Morgan",
     "rating": "4.9",
     "duration": "10 weeks"

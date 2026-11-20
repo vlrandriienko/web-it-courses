@@ -1,7 +1,7 @@
 import html from '@html-eslint/eslint-plugin';
 import htmlParser from '@html-eslint/parser';
 
-// Перевіряємо готовий HTML після оброблення EJS і конфігураційні файли JavaScript.
+// Перевіряємо HTML після оброблення EJS і файли JavaScript.
 export default [
   { ignores: ['node_modules/**', 'dist/assets/**'] },
   {
@@ -27,7 +27,7 @@ export default [
     },
   },
   {
-    files: ['*.js', 'scripts/*.mjs'],
+    files: ['src/*.js', '*.js', 'scripts/*.mjs'],
     rules: { 'no-unused-vars': 'error', 'no-unreachable': 'error' },
   },
 ];
